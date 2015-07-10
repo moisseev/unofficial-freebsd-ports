@@ -24,7 +24,7 @@ GH_ACCOUNT=	vstakhov
 GH_PROJECT=	rspamd-interface:interface \
 		doxydown:doxydown \
 		snowball:snowball
-GH_TAGNAME=	0227d24a1e \
+GH_TAGNAME=	59a41ed \
 		c2d4826:interface \
 		54377c4:doxydown \
 		4bc9f36:snowball
