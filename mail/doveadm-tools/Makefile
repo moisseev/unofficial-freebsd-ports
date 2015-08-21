@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	doveadm-tools
-PORTVERSION=	20150729
+PORTVERSION=	20150821
 CATEGORIES=	mail
 
 MAINTAINER=	moiseev@mezonplus.ru
@@ -15,12 +15,12 @@ NO_BUILD=	yes
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	moisseev
-GH_TAGNAME=	f2125da47e
+GH_TAGNAME=	445019caaa
 
 PLIST_FILES=	bin/doveadm-expunge \
 		bin/doveadm-mdboxrm \
 		bin/doveadm-report-quota \
-		bin/doveadm-backup-tcp \
-		"@sample etc/doveadm-backup-tcp.conf.sample"
+		bin/doveadm-backup \
+		"@sample etc/doveadm-backup.conf.sample"
 
 .include <bsd.port.mk>
