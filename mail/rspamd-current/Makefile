@@ -1,7 +1,7 @@
 # $FreeBSD: head/mail/rspamd/Makefile 390576 2015-06-25 14:56:44Z vsevolod $
 
 PORTNAME=	rspamd
-PORTVERSION=	0.9.9.20150723
+PORTVERSION=	1.0.3.20150925
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-current
 
@@ -24,8 +24,8 @@ GH_ACCOUNT=	vstakhov
 GH_PROJECT=	rspamd-interface:interface \
 		doxydown:doxydown \
 		snowball:snowball
-GH_TAGNAME=	4f9000c \
-		c2d4826:interface \
+GH_TAGNAME=	70f966f \
+		a636a2f:interface \
 		54377c4:doxydown \
 		4bc9f36:snowball
 
@@ -65,7 +65,7 @@ USE_SQLITE=	yes
 .endif
 
 .if ${PORT_OPTIONS:MREDIRECTOR}
- USES+=		perl5
+ USE_PERL5+=	run
  CMAKE_ARGS+=	-DENABLE_REDIRECTOR=ON
  PLIST_SUB+=	REDIRECTOR=""
  USE_RC_SUBR+=	rspamd_redirector
@@ -95,5 +95,9 @@ post-stage:
 		${STAGEDIR}/var/log/rspamd \
 		${STAGEDIR}/var/db/rspamd \
 		${STAGEDIR}/var/run/rspamd
+		# Linux specific
+		${RM} ${STAGEDIR}/${ETCDIR}/rspamd.systemd.conf
+		# No need, since rspamd.conf.sample is a same
+		${RM} ${STAGEDIR}/${ETCDIR}/rspamd.sysvinit.conf
 
 .include <bsd.port.mk>
