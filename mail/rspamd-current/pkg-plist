@@ -1,9 +1,9 @@
 bin/rspamd-%%RSPAMDVERSION%%
 bin/rspamd
-bin/rspamc-%%RSPAMDVERSION%%
-bin/rspamc
 bin/rspamadm-%%RSPAMDVERSION%%
 bin/rspamadm
+bin/rspamc-%%RSPAMDVERSION%%
+bin/rspamc
 %%REDIRECTOR%%bin/rspamd-redirector
 @sample %%ETCDIR%%/2tld.inc.sample
 @sample %%ETCDIR%%/common.conf.sample
@@ -64,6 +64,7 @@ lib/rspamd/librspamd-actrie.so
 %%DATADIR%%/rules/rspamd.lua
 %%DATADIR%%/www/README.md
 %%DATADIR%%/www/css/rspamd.css
+%%DATADIR%%/www/favicon.ico
 %%DATADIR%%/www/img/asc.png
 %%DATADIR%%/www/img/desc.png
 %%DATADIR%%/www/img/spinner.gif
@@ -82,6 +83,7 @@ lib/rspamd/librspamd-actrie.so
 %%DATADIR%%/www/src/components/piechart.jsx
 %%DATADIR%%/www/src/components/rrdgraph.jsx
 %%DATADIR%%/www/src/package.json
+man/man1/rspamadm.1.gz
 man/man1/rspamc.1.gz
 man/man8/rspamd.8.gz
 @dir %%EXAMPLESDIR%%

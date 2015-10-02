@@ -1,7 +1,7 @@
 # $FreeBSD: head/mail/rspamd/Makefile 390576 2015-06-25 14:56:44Z vsevolod $
 
 PORTNAME=	rspamd
-PORTVERSION=	1.0.3.20150925
+PORTVERSION=	1.0.4.20151002
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-current
 
@@ -24,8 +24,8 @@ GH_ACCOUNT=	vstakhov
 GH_PROJECT=	rspamd-interface:interface \
 		doxydown:doxydown \
 		snowball:snowball
-GH_TAGNAME=	70f966f \
-		a636a2f:interface \
+GH_TAGNAME=	4588826 \
+		ccdaed7:interface \
 		54377c4:doxydown \
 		4bc9f36:snowball
 
