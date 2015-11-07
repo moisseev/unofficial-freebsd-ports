@@ -12,9 +12,9 @@ LICENSE_NAME=	Public Domain
 LICENSE_TEXT=	The code is public domain.
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-USE_GITHUB= YES
-GH_ACCOUNT= moisseev
-GH_TAGNAME= 7ba63df
+USE_GITHUB=	YES
+GH_ACCOUNT=	moisseev
+GH_TAGNAME=	e916a35
 
 USE_SQLITE=	yes
 USE_LDCONFIG=	yes
