@@ -1,0 +1,4 @@
+Simple CDR/SMDR logger daemon. Main purpose of this daemon is to receive PBX
+call records at serial port and store it in plain files.
+
+WWW: http://github.com/moisseev/cdrd
