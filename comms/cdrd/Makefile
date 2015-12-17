@@ -25,6 +25,7 @@ PLIST_FILES=	bin/cdrd \
 		%%ETCDIR%%/cdrd.conf.default \
 		"@sample %%ETCDIR%%/cdrd.conf.sample" \
 		man/man1/cdrd.1.gz \
+		"@owner uucp" "@group dialer" \
 		"@dir /var/log/cdrd" \
 		"@dir /var/run/cdrd"
 
