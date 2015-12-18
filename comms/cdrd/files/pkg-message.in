@@ -1,0 +1,11 @@
+==========================================================================
+ - Add the following line to /etc/rc.conf to enable cdrd:
+
+     cdrd_enable="YES"
+
+ - Link (or copy) cdrd.newsyslog.conf to /usr/local/etc/newsyslog.conf.d/
+   to take care of log rotation:
+
+     # ln -s %%ETCDIR%%/cdrd.newsyslog.conf \
+         %%PREFIX%%/etc/newsyslog.conf.d
+==========================================================================

@@ -13,17 +13,18 @@ NO_BUILD=	yes
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	moisseev
-GH_TAGNAME=	6f69a24
+GH_TAGNAME=	25731c9
 
 USE_RC_SUBR=	cdrd
+SUB_FILES=	pkg-message
 
 PORTDOCS=	FAQ LICENSE README.md
-
 OPTIONS_DEFINE=	DOCS
 
 PLIST_FILES=	bin/cdrd \
 		%%ETCDIR%%/cdrd.conf.default \
 		"@sample %%ETCDIR%%/cdrd.conf.sample" \
+		"@sample %%ETCDIR%%/cdrd.newsyslog.conf.sample" \
 		man/man1/cdrd.1.gz \
 		"@owner uucp" "@group dialer" \
 		"@dir /var/log/cdrd" \
