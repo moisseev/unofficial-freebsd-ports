@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	cdrd
-PORTVERSION=	0.0.1
+PORTVERSION=	0.0.2
 CATEGORIES=	comms
 
 MAINTAINER=	moiseev@mezonplus.ru
@@ -13,7 +13,7 @@ NO_BUILD=	yes
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	moisseev
-GH_TAGNAME=	b512f57
+GH_TAGNAME=	752489a
 
 USE_RC_SUBR=	cdrd
 SUB_FILES=	pkg-message
