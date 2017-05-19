@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	doveadm-tools
-PORTVERSION=	20160411
+PORTVERSION=	20170519
 CATEGORIES=	mail
 
 MAINTAINER=	moiseev@mezonplus.ru
@@ -9,16 +9,17 @@ COMMENT=	Wrapper scripts set for doveadm(1)
 
 LICENSE=	BSD2CLAUSE
 
-RUN_DEPENDS=	dovecot2>=2.2.0:${PORTSDIR}/mail/dovecot2
+RUN_DEPENDS=	dovecot2>=2.2.0:mail/dovecot2
 
 NO_BUILD=	yes
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	moisseev
-GH_TAGNAME=	f10dfd5
+GH_TAGNAME=	24a887f
 
 PLIST_FILES=	bin/doveadm-expunge \
 		bin/doveadm-mdboxrm \
+		bin/doveadm-report-last-login \
 		bin/doveadm-report-quota \
 		bin/doveadm-backup \
 		bin/dsisck \
