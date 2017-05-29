@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	doveadm-tools
-PORTVERSION=	20170519
+PORTVERSION=	20170529
 CATEGORIES=	mail
 
 MAINTAINER=	moiseev@mezonplus.ru
@@ -12,10 +12,11 @@ LICENSE=	BSD2CLAUSE
 RUN_DEPENDS=	dovecot2>=2.2.0:mail/dovecot2
 
 NO_BUILD=	yes
+NO_ARCH=	yes
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	moisseev
-GH_TAGNAME=	24a887f
+GH_TAGNAME=	d13dd16
 
 PLIST_FILES=	bin/doveadm-expunge \
 		bin/doveadm-mdboxrm \
