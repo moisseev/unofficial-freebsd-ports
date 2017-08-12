@@ -2,6 +2,7 @@
 
 PORTNAME=	doveadm-tools
 PORTVERSION=	20170529
+PORTREVISION=	1
 CATEGORIES=	mail
 
 MAINTAINER=	moiseev@mezonplus.ru
@@ -9,7 +10,7 @@ COMMENT=	Wrapper scripts set for doveadm(1)
 
 LICENSE=	BSD2CLAUSE
 
-RUN_DEPENDS=	dovecot2>=2.2.0:mail/dovecot2
+RUN_DEPENDS=	dovecot>=2.2.0:mail/dovecot
 
 NO_BUILD=	yes
 NO_ARCH=	yes
