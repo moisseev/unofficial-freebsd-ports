@@ -1,0 +1,4 @@
+An lpd(8) text filter (input filter) that converts any document printed on
+virtual lpd(8) printer to PDF and sends it as an e-mail attachment.
+
+WWW: http://github.com/moisseev/ps2mail

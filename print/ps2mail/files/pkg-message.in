@@ -1,0 +1,6 @@
+======================================================================
+ - A symbolic link to %%ETCDIR%%/ps2mail.newsyslog.conf
+   has been created in the /usr/local/etc/newsyslog.conf.d directory.
+   You can edit %%ETCDIR%%/ps2mail.newsyslog.conf
+   to change log file rotation configuration.
+======================================================================
