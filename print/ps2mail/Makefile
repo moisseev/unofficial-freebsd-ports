@@ -18,11 +18,15 @@ TEST_DEPENDS=	p5-IPC-Run3>=0:devel/p5-IPC-Run3 \
 		p5-IPC-Shareable>=0:devel/p5-IPC-Shareable \
 		p5-Text-Template>=0:textproc/p5-Text-Template
 
+# Ghostscript 9.21 is required to run this port
+#USES=		ghostscript:run perl5
+USES=		perl5
+USE_PERL5=	5.14+ run test
+
 USE_GITHUB=	YES
 GH_ACCOUNT=	moisseev
 GH_TAGNAME=	7976504
 
-USE_PERL5=	run
 NO_ARCH=	yes
 TEST_TARGET=	test
 
