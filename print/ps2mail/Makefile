@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ps2mail
-PORTVERSION=	20171217
+PORTVERSION=	20171220
 CATEGORIES=	print
 
 MAINTAINER=	moiseev@mezonplus.ru
@@ -26,7 +26,7 @@ USE_PERL5=	5.14+ run test
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	moisseev
-GH_TAGNAME=	d4065bb
+GH_TAGNAME=	e2752bd
 
 NO_ARCH=	yes
 TEST_TARGET=	test
