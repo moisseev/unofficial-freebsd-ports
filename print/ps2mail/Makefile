@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ps2mail
-PORTVERSION=	20171220
+PORTVERSION=	20180319
 CATEGORIES=	print
 
 MAINTAINER=	moiseev@mezonplus.ru
@@ -10,7 +10,7 @@ COMMENT=	Print-to-email lpd(8) input filter
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	p5-Email-Address>=0:mail/p5-Email-Address \
+RUN_DEPENDS=	p5-Email-Address-XS>=0:mail/p5-Email-Address-XS \
 		p5-Email-Valid>=0:mail/p5-Email-Valid \
 		p5-IO-Interactive>=0:devel/p5-IO-Interactive \
 		p5-Locale-gettext>=0:devel/p5-Locale-gettext \
@@ -26,7 +26,7 @@ USE_PERL5=	5.14+ run test
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	moisseev
-GH_TAGNAME=	e2752bd
+GH_TAGNAME=	e638d8a
 
 NO_ARCH=	yes
 TEST_TARGET=	test
@@ -34,8 +34,8 @@ TEST_TARGET=	test
 SUB_FILES=	pkg-message
 
 PLIST_FILES=	libexec/ps2mail \
-		"@sample %%ETCDIR%%/ps2mail.conf.sample" \
-		"@sample %%ETCDIR%%/ps2mail.newsyslog.conf.sample" \
+		"@sample ${ETCDIR}/ps2mail.conf.sample" \
+		"@sample ${ETCDIR}/ps2mail.newsyslog.conf.sample" \
 		etc/newsyslog.conf.d/ps2mail.newsyslog.conf \
 		share/locale/ru/LC_MESSAGES/ps2mail.mo
 
