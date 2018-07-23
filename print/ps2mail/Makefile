@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ps2mail
-PORTVERSION=	20180606
+PORTVERSION=	20180723
 CATEGORIES=	print
 
 MAINTAINER=	moiseev@mezonplus.ru
@@ -19,14 +19,12 @@ TEST_DEPENDS=	p5-IPC-Run3>=0:devel/p5-IPC-Run3 \
 		p5-IPC-Shareable>=0:devel/p5-IPC-Shareable \
 		p5-Text-Template>=0:textproc/p5-Text-Template
 
-# Ghostscript 9.21 is required to run this port
-#USES=		ghostscript:run perl5
-USES=		gettext perl5
+USES=		gettext ghostscript:run perl5
 USE_PERL5=	5.14+ run test
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	moisseev
-GH_TAGNAME=	f710163
+GH_TAGNAME=	e8354ed
 
 NO_ARCH=	yes
 TEST_TARGET=	test

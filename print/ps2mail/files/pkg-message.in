@@ -1,6 +1,4 @@
 ======================================================================
- - Ghostscript 9.21 is required to run this port.
-
  - A symbolic link to %%ETCDIR%%/ps2mail.newsyslog.conf
    has been created in the /usr/local/etc/newsyslog.conf.d directory.
    You can edit %%ETCDIR%%/ps2mail.newsyslog.conf
