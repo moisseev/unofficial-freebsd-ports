@@ -1,0 +1,5 @@
+A multiuser Perl CGI script for power up computers remotely (WoL).
+MultiWOL offers capability of waking up multiple hosts simultaneously
+with an automatic check if the remote host has or may has not awoken.
+
+WWW: http://github.com/moisseev/multiwol
