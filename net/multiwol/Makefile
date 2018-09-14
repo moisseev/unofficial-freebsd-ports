@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	multiwol
-PORTVERSION=	20180808
+PORTVERSION=	20180914
 CATEGORIES=	net
 
 MAINTAINER=	moiseev@mezonplus.ru
@@ -10,7 +10,7 @@ COMMENT=	Perl CGI script for power up computers remotely (WoL)
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	p5-CGI>=0:www/p5-CGI \
+RUN_DEPENDS=	p5-CGI>=4.08:www/p5-CGI \
 		p5-IO-Interface>=0:net/p5-IO-Interface \
 		p5-Locale-gettext>=0:devel/p5-Locale-gettext \
 		p5-Net-ARP>=0:net/p5-Net-ARP \
@@ -21,7 +21,7 @@ USE_PERL5=	5.14+ run
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	moisseev
-GH_TAGNAME=	ba8f055
+GH_TAGNAME=	f1ec128
 
 NO_BUILD=	yes
 NO_ARCH=	yes
