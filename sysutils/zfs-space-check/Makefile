@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	zfs-space-check
-PORTVERSION=	20190908
+PORTVERSION=	20201026
 CATEGORIES=	sysutils
 
 MAINTAINER=	moiseev@mezonplus.ru
@@ -14,7 +14,7 @@ NO_BUILD=	yes
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	moisseev
-GH_TAGNAME=	2e9cedc
+GH_TAGNAME=	4c5faa4
 
 PLIST_FILES=	bin/zfs-space-check \
 		"@sample etc/zfs-space-check.conf.sample" \
