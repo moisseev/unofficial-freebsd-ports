@@ -1,5 +1,5 @@
 PORTNAME=	zfs-space-check
-PORTVERSION=	20210609
+PORTVERSION=	20210610
 CATEGORIES=	sysutils
 
 MAINTAINER=	moiseev@mezonplus.ru
@@ -12,7 +12,7 @@ NO_BUILD=	yes
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	moisseev
-GH_TAGNAME=	b7441ee
+GH_TAGNAME=	ff2dd56
 
 PLIST_FILES=	bin/zfs-space-check \
 		"@sample etc/zfs-space-check.conf.sample" \
