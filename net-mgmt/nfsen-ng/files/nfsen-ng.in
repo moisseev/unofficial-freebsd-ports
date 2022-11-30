@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# PROVIDE: nfsen-ng
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following line to /etc/rc.conf to enable nfsen-ng:
+# nfsen_ng_enable="YES"
+
+. /etc/rc.subr
+
+name="nfsen_ng"
+rcvar=nfsen_ng_enable
+
+load_rc_config $name
+
+: ${nfsen_ng_enable:="NO"}
+: ${nfsen_ng_user:="www"}
+: ${nfsen_ng_group:="www"}
+: ${nfsen_ng_config:="%%WWWDIR%%/backend/settings/settings.php"}
+
+command_interpreter="%%PREFIX%%/bin/php"
+command="%%WWWDIR%%/backend/listen.php"
+cli="%%WWWDIR%%/backend/cli.php"
+
+required_files="${nfsen_ng_config}"
+pidfile="%%WWWDIR%%/backend/nfsen-ng.pid"
+
+start_cmd="cli_cmd"
+stop_cmd="cli_cmd"
+status_cmd="cli_cmd"
+
+cli_cmd()
+{
+	su -m ${nfsen_ng_user} -c "${cli} ${rc_arg}"
+}
+
+run_rc_command "$1"

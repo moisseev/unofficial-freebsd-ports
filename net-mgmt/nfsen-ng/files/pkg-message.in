@@ -1,0 +1,19 @@
+[
+{ type: install
+  message: <<EOM
+ - Add the following line to /etc/rc.conf to enable nfsen-ng:
+
+     nfsen_ng_enable="YES"
+
+   or run:
+
+     service nfsen-ng enable
+
+ - nfsen-ng does not start nfcapd.
+   nfsen-ng expects the profiles-data folder structure to be
+   PROFILES_DATA_PATH/PROFILE/SOURCE/YYYY/MM/DD/nfcapd.YYYYMMDDHHII,
+   e.g. /var/nfdump/profiles_data/live/source1/2018/12/01/nfcapd.201812010225
+
+EOM
+}
+]
