@@ -1,5 +1,5 @@
 PORTNAME=	nfsen-ng
-PORTVERSION=	0.2.a1.20221130
+PORTVERSION=	0.3.1.a1.20240420
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net-mgmt
 PKGNAMESUFFIX=	-devel${PHP_PKGNAMESUFFIX}
@@ -28,7 +28,7 @@ SUB_FILES=	pkg-message
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	mbolli
-GH_TAGNAME=	461cab4
+GH_TAGNAME=	cb3d819
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|^#!/usr/bin/env php$$|#!${PREFIX}/bin/php|' ${WRKSRC}/backend/cli.php
