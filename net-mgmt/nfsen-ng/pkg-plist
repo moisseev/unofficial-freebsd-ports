@@ -1,18 +1,21 @@
+%%WWWDIR%%/API_ENDPOINTS.md
+%%WWWDIR%%/INSTALL.md
 %%WWWDIR%%/LICENSE
 %%WWWDIR%%/README.md
-%%WWWDIR%%/backend/api/api.php
-%%WWWDIR%%/backend/common/config.php
-%%WWWDIR%%/backend/common/debug.php
-%%WWWDIR%%/backend/common/import.php
-%%WWWDIR%%/backend/datasources/akumuli.php
-%%WWWDIR%%/backend/datasources/datasource.php
-%%WWWDIR%%/backend/datasources/rrd.php
+%%WWWDIR%%/backend/api/Api.php
+%%WWWDIR%%/backend/common/Config.php
+%%WWWDIR%%/backend/common/Debug.php
+%%WWWDIR%%/backend/common/Import.php
+%%WWWDIR%%/backend/datasources/Akumuli.php
+%%WWWDIR%%/backend/datasources/Datasource.php
+%%WWWDIR%%/backend/datasources/Rrd.php
 %%WWWDIR%%/backend/index.php
-%%WWWDIR%%/backend/processor/nfdump.php
-%%WWWDIR%%/backend/processor/processor.php
+%%WWWDIR%%/backend/processor/Nfdump.php
+%%WWWDIR%%/backend/processor/Processor.php
 @sample %%WWWDIR%%/backend/settings/settings.php.sample
-%%WWWDIR%%/backend/vendor/progressbar.php
-%%WWWDIR%%/frontend/css/bootstrap-theme.min.css
+%%WWWDIR%%/backend/vendor/ProgressBar.php
+%%WWWDIR%%/composer.json
+%%WWWDIR%%/composer.lock
 %%WWWDIR%%/frontend/css/bootstrap.min.css
 %%WWWDIR%%/frontend/css/bootstrap.min.css.map
 %%WWWDIR%%/frontend/css/dygraph.css
@@ -20,11 +23,6 @@
 %%WWWDIR%%/frontend/css/ion.rangeSlider.css
 %%WWWDIR%%/frontend/css/nfsen-ng.css
 %%WWWDIR%%/frontend/css/sprite-skin-nice.png
-%%WWWDIR%%/frontend/fonts/glyphicons-halflings-regular.eot
-%%WWWDIR%%/frontend/fonts/glyphicons-halflings-regular.svg
-%%WWWDIR%%/frontend/fonts/glyphicons-halflings-regular.ttf
-%%WWWDIR%%/frontend/fonts/glyphicons-halflings-regular.woff
-%%WWWDIR%%/frontend/fonts/glyphicons-halflings-regular.woff2
 %%WWWDIR%%/frontend/index.html
 %%WWWDIR%%/frontend/js/bootstrap.min.js
 %%WWWDIR%%/frontend/js/dygraph.min.js
@@ -32,6 +30,7 @@
 %%WWWDIR%%/frontend/js/ion.rangeSlider.min.js
 %%WWWDIR%%/frontend/js/jquery.min.js
 %%WWWDIR%%/frontend/js/nfsen-ng.js
+%%WWWDIR%%/frontend/js/popper.min.js
 @mode 0555
 %%WWWDIR%%/backend/cli.php
 %%WWWDIR%%/backend/listen.php

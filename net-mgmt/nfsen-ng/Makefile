@@ -1,5 +1,5 @@
 PORTNAME=	nfsen-ng
-PORTVERSION=	0.2
+PORTVERSION=	0.4.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net-mgmt
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
@@ -12,6 +12,7 @@ LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	${PHP_PKGNAMEPREFIX}pecl-rrd>0:databases/pecl-rrd@${PHP_FLAVOR} \
+		${PHP_PKGNAMEPREFIX}composer>=0:devel/php-composer@${PHP_FLAVOR} \
 		nfdump>=0:net-mgmt/nfdump
 
 USES=		php:flavors
@@ -35,6 +36,7 @@ post-patch:
 do-install:
 	${MKDIR} ${STAGEDIR}${WWWDIR}
 	cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${STAGEDIR}${WWWDIR}
+	cd ${STAGEDIR}${WWWDIR} && ${RM} Dockerfile docker-compose.yml docker-entrypoint.sh
 	${MKDIR} ${STAGEDIR}${WWWDIR}/backend/datasources/data
 	cd ${STAGEDIR}${WWWDIR}/backend/settings && \
 		${MV} settings.php.dist settings.php.sample

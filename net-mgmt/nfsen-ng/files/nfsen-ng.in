@@ -19,7 +19,7 @@ load_rc_config $name
 : ${nfsen_ng_group:="www"}
 : ${nfsen_ng_config:="%%WWWDIR%%/backend/settings/settings.php"}
 
-command_interpreter="%%PREFIX%%/bin/php"
+command_interpreter="php"
 command="%%WWWDIR%%/backend/listen.php"
 cli="%%WWWDIR%%/backend/cli.php"
 
