@@ -1,5 +1,5 @@
 PORTNAME=	doveadm-tools
-PORTVERSION=	20220610
+PORTVERSION=	20260529
 CATEGORIES=	mail
 
 MAINTAINER=	moiseev@mezonplus.ru
@@ -16,7 +16,6 @@ default_CONFLICTS_INSTALL=	${PORTNAME}-full
 full_CONFLICTS_INSTALL=	${PORTNAME}
 full_PKGNAMESUFFIX=	-full
 full_RUN_DEPENDS+=	p5-IO-Interactive>=0:devel/p5-IO-Interactive \
-			p5-IPC-Shareable>=0:devel/p5-IPC-Shareable \
 			p5-Mail-Audit-Attach>=0:mail/p5-Mail-Audit-Attach
 COMMENT_full=		(with doveadm-rm-attachments)
 
@@ -25,7 +24,7 @@ NO_ARCH=	yes
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	moisseev
-GH_TAGNAME=	1cc4731
+GH_TAGNAME=	3d77013
 
 PLIST_FILES=	bin/doveadm-backup \
 		bin/doveadm-expunge \
