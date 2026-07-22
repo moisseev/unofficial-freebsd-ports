@@ -1,5 +1,5 @@
 PORTNAME=	doveadm-tools
-PORTVERSION=	20260529
+PORTVERSION=	20260722
 CATEGORIES=	mail
 
 MAINTAINER=	moiseev@mezonplus.ru
@@ -24,7 +24,7 @@ NO_ARCH=	yes
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	moisseev
-GH_TAGNAME=	3d77013
+GH_TAGNAME=	032e0ca
 
 PLIST_FILES=	bin/doveadm-backup \
 		bin/doveadm-expunge \
