@@ -1,0 +1,9 @@
+f2b-manual-stats keeps per-address connection-attempt statistics for the
+addresses banned in fail2ban's [manual] jail (pf table f2b-manual, anchor
+f2b/manual).
+
+pf counters live only in the kernel and are reset to zero on every OS reboot,
+pf ruleset reload and fail2ban restart.  This tool samples the per-address
+In/Block counters periodically, accumulates the deltas on disk and reports the
+number of attempts per IP/CIDR over the last 90 days, so stale entries that no
+longer generate traffic can be pruned from the jail manually.
