@@ -1,5 +1,5 @@
 PORTNAME=	nfsen-ng
-PORTVERSION=	0.3.1.a1.20240420
+PORTVERSION=	0.4.0.20251023
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net-mgmt
 PKGNAMESUFFIX=	-devel${PHP_PKGNAMESUFFIX}
@@ -29,16 +29,19 @@ SUB_FILES=	pkg-message
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	mbolli
-GH_TAGNAME=	cb3d819
+GH_TAGNAME=	99fbcc6
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|^#!/usr/bin/env php$$|#!${PREFIX}/bin/php|' ${WRKSRC}/backend/cli.php
-	@${REINPLACE_CMD} -e 's|^#!/usr/bin/php$$|#!${PREFIX}/bin/php|' ${WRKSRC}/backend/listen.php
+	@${REINPLACE_CMD} -e 's|^#!/usr/bin/env php$$|#!${PREFIX}/bin/php|' \
+		-e 's|^#!/usr/bin/php$$|#!${PREFIX}/bin/php|' \
+		${WRKSRC}/backend/cli.php ${WRKSRC}/backend/listen.php
 	@${REINPLACE_CMD} -e 's|'/usr/bin/nfdump'|${PREFIX}/bin/nfdump|' ${WRKSRC}/backend/settings/settings.php.dist
 
 do-install:
 	${MKDIR} ${STAGEDIR}${WWWDIR}
 	cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${STAGEDIR}${WWWDIR}
+	cd ${STAGEDIR}${WWWDIR} && ${RM} Dockerfile docker-compose.yml docker-entrypoint.sh \
+		package.json pnpm-lock.yaml eslint.config.js
 	${INSTALL_DATA} ${WRKSRC}/.htaccess ${STAGEDIR}${WWWDIR}/.htaccess
 	${MKDIR} ${STAGEDIR}${WWWDIR}/backend/datasources/data
 	cd ${STAGEDIR}${WWWDIR}/backend/settings && \

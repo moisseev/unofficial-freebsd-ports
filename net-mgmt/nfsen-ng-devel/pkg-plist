@@ -7,6 +7,7 @@
 %%WWWDIR%%/backend/common/Config.php
 %%WWWDIR%%/backend/common/Debug.php
 %%WWWDIR%%/backend/common/Import.php
+%%WWWDIR%%/backend/common/Misc.php
 %%WWWDIR%%/backend/datasources/Akumuli.php
 %%WWWDIR%%/backend/datasources/Datasource.php
 %%WWWDIR%%/backend/datasources/Rrd.php
@@ -32,7 +33,6 @@
 %%WWWDIR%%/frontend/js/jquery.min.js
 %%WWWDIR%%/frontend/js/nfsen-ng.js
 %%WWWDIR%%/frontend/js/popper.min.js
-%%WWWDIR%%/psalm.xml
 @mode 0555
 %%WWWDIR%%/backend/cli.php
 %%WWWDIR%%/backend/listen.php
