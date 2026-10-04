@@ -9,9 +9,20 @@
 
      service nfsen-ng enable
 
+ - Edit the configuration file:
+
+     /usr/local/www/nfsen-ng/backend/settings/settings.php
+
+   (copied from settings.php.sample on install; set your nfdump
+   profiles-data directory and sources)
+
  - Then run:
 
      cd /usr/local/www/nfsen-ng && composer install --no-dev
+
+ - When using the Apache web server, make sure it reads the shipped
+   .htaccess file (AllowOverride All). With nginx, configure an
+   equivalent rewrite of /api/ to backend/index.php.
 
  - Note: nfsen-ng does not start nfcapd.
    It expects the profiles-data directory structure to be:

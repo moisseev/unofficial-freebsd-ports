@@ -12,6 +12,7 @@ LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	${PHP_PKGNAMEPREFIX}pecl-rrd>0:databases/pecl-rrd@${PHP_FLAVOR} \
+		${PHP_PKGNAMEPREFIX}composer>=0:devel/php-composer@${PHP_FLAVOR} \
 		nfdump>=0:net-mgmt/nfdump
 
 USES=		php:flavors
@@ -38,6 +39,7 @@ post-patch:
 do-install:
 	${MKDIR} ${STAGEDIR}${WWWDIR}
 	cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${STAGEDIR}${WWWDIR}
+	${INSTALL_DATA} ${WRKSRC}/.htaccess ${STAGEDIR}${WWWDIR}/.htaccess
 	${MKDIR} ${STAGEDIR}${WWWDIR}/backend/datasources/data
 	cd ${STAGEDIR}${WWWDIR}/backend/settings && \
 		${MV} settings.php.dist settings.php.sample

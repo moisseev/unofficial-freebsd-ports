@@ -1,3 +1,4 @@
+%%WWWDIR%%/.htaccess
 %%WWWDIR%%/API_ENDPOINTS.md
 %%WWWDIR%%/INSTALL.md
 %%WWWDIR%%/LICENSE

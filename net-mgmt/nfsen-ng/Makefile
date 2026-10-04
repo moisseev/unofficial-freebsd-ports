@@ -18,6 +18,8 @@ RUN_DEPENDS=	${PHP_PKGNAMEPREFIX}pecl-rrd>0:databases/pecl-rrd@${PHP_FLAVOR} \
 USES=		php:flavors
 USE_RC_SUBR=	nfsen-ng
 
+CONFLICTS_INSTALL=	nfsen-ng-devel
+
 WWWDIR?=	${PREFIX}/www/${PORTNAME}
 
 NO_BUILD=	yes
@@ -37,8 +39,11 @@ do-install:
 	${MKDIR} ${STAGEDIR}${WWWDIR}
 	cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${STAGEDIR}${WWWDIR}
 	cd ${STAGEDIR}${WWWDIR} && ${RM} Dockerfile docker-compose.yml docker-entrypoint.sh
+	${INSTALL_DATA} ${WRKSRC}/.htaccess ${STAGEDIR}${WWWDIR}/.htaccess
 	${MKDIR} ${STAGEDIR}${WWWDIR}/backend/datasources/data
 	cd ${STAGEDIR}${WWWDIR}/backend/settings && \
 		${MV} settings.php.dist settings.php.sample
+	${CHMOD} 0555 ${STAGEDIR}${WWWDIR}/backend/cli.php \
+		${STAGEDIR}${WWWDIR}/backend/listen.php
 
 .include <bsd.port.mk>
